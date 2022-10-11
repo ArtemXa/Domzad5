@@ -58,7 +58,7 @@ void Zadacha38()
 {
     int size = 8;
     double[] numbers = new double[size];
-    
+
     FillArrayD(numbers, 10, 100);
     PrintArrayD(numbers);
     Difference(numbers);
@@ -80,7 +80,7 @@ void FillArrayD(double[] numbers, int minValue = -1000, int maxValue = 1000)
     Random random = new Random();
     for (int i = 0; i < numbers.Length; i++)
     {
-        numbers[i] = random.NextDouble() * 10;
+        numbers[i] = Math.Round(random.NextDouble() * 10, 2);
     }
 }
 void PrintArrayD(double[] numbers)
